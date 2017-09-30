@@ -1,5 +1,5 @@
 import React from 'react';
-import AnswerView from './answer-view';
+import AnswerSectionView from './answer-section-view';
 
 const AppView = (props) => {
     return (
@@ -8,19 +8,12 @@ const AppView = (props) => {
             <ul>
                 {
                     [...props.questions.values()].map(question => (
-                        <li key={'q-'+question.id}>{question.text}
-                            <ol>
-                                {
-                                    [...question.answers].map((answer, index) => (
-                                        <li key={'q-'+question.id+'-ans-'+index}>
-                                            <AnswerView
-                                                index={index}
-                                                text={answer}
-                                            />
-                                        </li>
-                                    ))
-                                }
-                            </ol>
+                        <li key={'q-'+question.id}>
+                            {question.text}
+                            <AnswerSectionView
+                                questionIndex={question.id}
+                                answers={question.answers}
+                            />
                         </li>
                     ))
                 }

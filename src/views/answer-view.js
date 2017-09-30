@@ -5,7 +5,7 @@ const AnswerView = (props) => {
         <button value={props.index}>
             {props.text}
         </button>
-    )
+    );
 }
 
 export default AnswerView;
