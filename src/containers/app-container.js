@@ -1,6 +1,7 @@
 import React from 'react';
 import AppView from '../views/app-view';
 import { Container } from 'flux/utils';
+import QuestionActions from '../data/actions/question-actions';
 import QuestionStore from '../data/stores/question-store';
 
 function getStores() {
@@ -11,7 +12,9 @@ function getStores() {
 
 function getState() {
     return {
-        questions: QuestionStore.getState()
+        questions: QuestionStore.getState(),
+
+        onCreate: QuestionActions.createQuestion
     };
 }
 
