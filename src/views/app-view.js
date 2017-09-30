@@ -1,5 +1,5 @@
 import React from 'react';
-import AnswerSectionView from './answer-section-view';
+import QuestionView from './question-view';
 
 const AppView = (props) => {
     return (
@@ -9,10 +9,8 @@ const AppView = (props) => {
                 {
                     [...props.questions.values()].map(question => (
                         <li key={'q-'+question.id}>
-                            {question.text}
-                            <AnswerSectionView
-                                questionIndex={question.id}
-                                answers={question.answers}
+                            <QuestionView
+                                question={question}
                             />
                         </li>
                     ))
