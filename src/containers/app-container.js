@@ -1,13 +1,18 @@
 import React from 'react';
-import { Container } from 'flux/utils';
 import AppView from '../views/app-view';
+import { Container } from 'flux/utils';
+import QuestionStore from '../data/stores/question-store';
 
 function getStores() {
-    return [];
+    return [
+        QuestionStore
+    ];
 }
 
 function getState() {
-    return {};
+    return {
+        questions: QuestionStore.getState()
+    };
 }
 
-export default Container.createFunctional(<AppView />, getStores, getState);
+export default Container.createFunctional(AppView, getStores, getState);
