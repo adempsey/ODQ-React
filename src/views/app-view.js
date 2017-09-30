@@ -1,4 +1,5 @@
 import React from 'react';
+import AnswerView from './answer-view';
 
 const AppView = (props) => {
     return (
@@ -9,9 +10,15 @@ const AppView = (props) => {
                     [...props.questions.values()].map(question => (
                         <li key={'q-'+question.id}>{question.text}
                             <ol>
-                                {[...question.answers].map((answer, index) => (
-                                    <li key={'q-'+question.id+'-ans-'+index}>{answer}</li>
-                                ))
+                                {
+                                    [...question.answers].map((answer, index) => (
+                                        <li key={'q-'+question.id+'-ans-'+index}>
+                                            <AnswerView
+                                                index={index}
+                                                text={answer}
+                                            />
+                                        </li>
+                                    ))
                                 }
                             </ol>
                         </li>
