@@ -7,10 +7,10 @@ const AppView = (props) => {
             <ul>
                 {
                     [...props.questions.values()].map(question => (
-                        <li key={question.index}>{question.text}
+                        <li key={'q-'+question.id}>{question.text}
                             <ol>
                                 {[...question.answers].map((answer, index) => (
-                                    <li key={index}>{answer}</li>
+                                    <li key={'q-'+question.id+'-ans-'+index}>{answer}</li>
                                 ))
                                 }
                             </ol>

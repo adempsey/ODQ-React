@@ -1,7 +1,7 @@
 import { Record } from 'immutable';
 
 const Question = Record({
-    index: 0,
+    id: 0,
     response: -1,
     text: '',
     answers: []
