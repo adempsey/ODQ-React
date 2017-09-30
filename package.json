@@ -2,6 +2,7 @@
     "name": "ODQ",
     "version": "0.0.1",
     "description": "Oswestry Disability Questionnaire Webapp",
+    "repository": "git@github.com:adempsey/ODQ-React.git",
     "main": "src/js/root.js",
     "author": "Andrew Dempsey",
     "dependencies": {
