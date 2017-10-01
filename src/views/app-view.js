@@ -8,27 +8,30 @@ const AppView = (props) => {
     const currentIndex = props.questionDisplay;
     const questionList = [...props.questions.values()].map(q => {return q});
 
-    var currentQuestion = null;
+    var displayView = null;
     const createResponse = (event) => {
         props.onSelect(currentIndex, event.target.value);
     };
+
     if (questionList.length > 0 && currentIndex < questionList.length) {
-        currentQuestion = <QuestionView
+        displayView = <QuestionView
                             question={questionList[currentIndex]}
                             onSelect={createResponse}
                           /> ;
+    } else if (questionList.length > 0 && currentIndex >= questionList.length) {
+        displayView = <SummaryView questions={questionList}/>
     }
 
     return (
         <div>
             <h1>heyyy</h1>
+            {displayView}
             <button onClick={props.onPrevious}>Back</button>
             <button
                 onClick={props.onAdvance}
                 disabled={questionList[currentIndex] != null && questionList[currentIndex].response == -1}>
                 Next
             </button>
-            {currentQuestion}
         </div>
     );
 };
