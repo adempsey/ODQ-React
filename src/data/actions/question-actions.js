@@ -8,6 +8,12 @@ const QuestionActions = {
             text,
             answers
         });
+    },
+
+    advanceQuestion() {
+        Dispatcher.dispatch({
+            type: QuestionActionTypes.ADVANCE_QUESTION
+        })
     }
 }
 

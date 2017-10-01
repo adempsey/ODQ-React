@@ -13,8 +13,10 @@ function getStores() {
 function getState() {
     return {
         questions: QuestionStore.getState(),
+        currentIndex: 0,
 
-        onCreate: QuestionActions.createQuestion
+        onCreate: QuestionActions.createQuestion,
+        onAdvance: QuestionActions.advanceQuestion
     };
 }
 
