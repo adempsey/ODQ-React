@@ -9,13 +9,13 @@ class QuestionDisplayStore extends ReduceStore {
     }
 
     getInitialState() {
-        return Immutable.Record({counter: 0});
+        return 0;
     }
 
     reduce(state, action) {
         switch (action.type) {
             case QuestionActionTypes.ADVANCE_QUESTION:
-                return state.set(counter, counter + 1)
+                return state + 1;
 
             default:
                 return state;

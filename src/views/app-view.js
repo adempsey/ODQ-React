@@ -4,7 +4,7 @@ import Immutable from 'immutable';
 
 const AppView = (props) => {
 
-    const currentIndex = props.questionDisplay().get('counter');
+    const currentIndex = props.questionDisplay;
     const questionList = [...props.questions.values()].map(q => {return q});
 
     var currentQuestion = null;
@@ -15,6 +15,7 @@ const AppView = (props) => {
     return (
         <div>
             <h1>heyyy</h1>
+            <button  onClick={props.onAdvance}>Next</button>
             {currentQuestion}
         </div>
     );
