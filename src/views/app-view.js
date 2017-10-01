@@ -23,7 +23,11 @@ const AppView = (props) => {
         <div>
             <h1>heyyy</h1>
             <button onClick={props.onPrevious}>Back</button>
-            <button onClick={props.onAdvance}>Next</button>
+            <button
+                onClick={props.onAdvance}
+                disabled={questionList[currentIndex] != null && questionList[currentIndex].response == -1}>
+                Next
+            </button>
             {currentQuestion}
         </div>
     );
