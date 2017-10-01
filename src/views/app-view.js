@@ -15,6 +15,7 @@ const AppView = (props) => {
     return (
         <div>
             <h1>heyyy</h1>
+            <button  onClick={props.onPrevious}>Back</button>
             <button  onClick={props.onAdvance}>Next</button>
             {currentQuestion}
         </div>

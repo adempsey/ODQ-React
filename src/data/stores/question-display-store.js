@@ -17,6 +17,9 @@ class QuestionDisplayStore extends ReduceStore {
             case QuestionActionTypes.ADVANCE_QUESTION:
                 return state + 1;
 
+            case QuestionActionTypes.PREVIOUS_QUESTION:
+                return Math.max(state - 1, 0);
+
             default:
                 return state;
         }

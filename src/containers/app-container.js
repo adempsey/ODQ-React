@@ -18,7 +18,8 @@ function getState() {
         questionDisplay: QuestionDisplayStore.getState(),
 
         onCreate: QuestionActions.createQuestion,
-        onAdvance: QuestionActions.advanceQuestion
+        onAdvance: QuestionActions.advanceQuestion,
+        onPrevious: QuestionActions.previousQuestion
     };
 }
 

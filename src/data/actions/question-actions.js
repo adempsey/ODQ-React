@@ -14,6 +14,12 @@ const QuestionActions = {
         Dispatcher.dispatch({
             type: QuestionActionTypes.ADVANCE_QUESTION
         })
+    },
+
+    previousQuestion() {
+        Dispatcher.dispatch({
+            type: QuestionActionTypes.PREVIOUS_QUESTION
+        })
     }
 }
 
