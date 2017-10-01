@@ -1,17 +1,26 @@
 import React from 'react';
 import AnswerSectionView from './answer-section-view';
+import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
 
 const QuestionView = (props) => {
     return (
-        <div>
-            <h1>{props.question.text}</h1>
-            <AnswerSectionView
-                questionIndex={props.question.id}
-                answers={props.question.answers}
-                onSelect={props.onSelect}
-                response={props.question.response}
-            />
-        </div>
+        <Grid>
+            <Row>
+                <Col xs={12} md={4}>
+                    <PageHeader>{props.question.text}</PageHeader>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12}>
+                    <AnswerSectionView
+                        questionIndex={props.question.id}
+                        answers={props.question.answers}
+                        onSelect={props.onSelect}
+                        response={props.question.response}
+                    />
+                </Col>
+            </Row>
+        </Grid>
     );
 };
 
