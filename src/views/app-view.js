@@ -1,12 +1,14 @@
 import React from 'react';
 import QuestionView from './question-view';
+import Immutable from 'immutable';
 
 const AppView = (props) => {
 
-    const currentIndex = props.currentIndex;
+    const currentIndex = props.questionDisplay().get('counter');
     const questionList = [...props.questions.values()].map(q => {return q});
+
     var currentQuestion = null;
-    if (questionList.length > 0) {
+    if (questionList.length > 0 && currentIndex < questionList.length) {
         currentQuestion = <QuestionView question={questionList[currentIndex]} /> ;
     }
 
