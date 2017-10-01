@@ -20,6 +20,14 @@ const QuestionActions = {
         Dispatcher.dispatch({
             type: QuestionActionTypes.PREVIOUS_QUESTION
         })
+    },
+
+    selectAnswer(questionID, answerIndex) {
+        Dispatcher.dispatch({
+            type: QuestionActionTypes.SELECT_ANSWER,
+            questionID,
+            answerIndex
+        })
     }
 }
 

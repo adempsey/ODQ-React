@@ -19,7 +19,8 @@ function getState() {
 
         onCreate: QuestionActions.createQuestion,
         onAdvance: QuestionActions.advanceQuestion,
-        onPrevious: QuestionActions.previousQuestion
+        onPrevious: QuestionActions.previousQuestion,
+        onSelect: QuestionActions.selectAnswer
     };
 }
 

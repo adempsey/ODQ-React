@@ -2,7 +2,9 @@ import React from 'react';
 
 const AnswerView = (props) => {
     return (
-        <button value={props.index}>
+        <button
+            value={props.index}
+            onClick={props.onSelect}>
             {props.text}
         </button>
     );

@@ -12,6 +12,7 @@ const AnswerSectionView = (props) => {
                         <AnswerView
                             index={index}
                             text={answer}
+                            onSelect={props.onSelect}
                         />
                     </li>
                 ))

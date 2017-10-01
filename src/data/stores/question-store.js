@@ -28,6 +28,10 @@ class QuestionStore extends ReduceStore {
                     answers: action.answers
                 }));
 
+            case QuestionActionTypes.SELECT_ANSWER:
+                return state.update(("id-"+(action.questionID+1)),
+                question => question.set('response', action.answerIndex));
+
             default:
                 return state;
         }
