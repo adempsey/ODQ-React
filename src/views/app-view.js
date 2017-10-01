@@ -1,6 +1,7 @@
 import React from 'react';
 import QuestionView from './question-view';
 import Immutable from 'immutable';
+import SummaryView from './summary-view';
 
 const AppView = (props) => {
 
