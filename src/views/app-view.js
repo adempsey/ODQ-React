@@ -2,6 +2,7 @@ import React from 'react';
 import QuestionView from './question-view';
 import Immutable from 'immutable';
 import SummaryView from './summary-view';
+import { ButtonToolbar, Button } from 'react-bootstrap';
 
 const AppView = (props) => {
 
@@ -26,12 +27,22 @@ const AppView = (props) => {
         <div>
             <h1>heyyy</h1>
             {displayView}
-            <button onClick={props.onPrevious}>Back</button>
-            <button
-                onClick={props.onAdvance}
-                disabled={questionList[currentIndex] != null && questionList[currentIndex].response == -1}>
-                Next
-            </button>
+            <ButtonToolbar>
+                <Button
+                    className="navigation-button"
+                    bsSize="large"
+                    onClick={props.onPrevious}>
+                    Back
+                </Button>
+                <Button
+                    className="navigation-button"
+                    bsStyle="success"
+                    bsSize="large"
+                    onClick={props.onAdvance}
+                    disabled={questionList[currentIndex] != null && questionList[currentIndex].response == -1}>
+                    Next
+                </Button>
+            </ButtonToolbar>
         </div>
     );
 };

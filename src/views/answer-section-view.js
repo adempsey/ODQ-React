@@ -1,23 +1,25 @@
 import React from 'react';
 import AnswerView from './answer-view';
+import { ButtonToolbar } from 'react-bootstrap';
 
 const AnswerSectionView = (props) => {
+
+    const wellStyles = {maxWidth: 800, margin: '0 auto 10px'};
+
     return (
-        <ul>
+        <div className="well" style={wellStyles}>
             {
                 props.answers.map((answer, index) => (
-                    <li
+                    <AnswerView
                         key = {'q-'+props.questionIndex+'a-'+index}
-                    >
-                        <AnswerView
-                            index={index}
-                            text={index == props.response ? "*"+answer : answer}
-                            onSelect={props.onSelect}
-                        />
-                    </li>
+                        index={index}
+                        text={answer}
+                        selected={index == props.response}
+                        onSelect={props.onSelect}
+                    />
                 ))
             }
-        </ul>
+        </div>
     );
 }
 
