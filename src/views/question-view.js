@@ -9,6 +9,7 @@ const QuestionView = (props) => {
                 questionIndex={props.question.id}
                 answers={props.question.answers}
                 onSelect={props.onSelect}
+                response={props.question.response}
             />
         </div>
     );

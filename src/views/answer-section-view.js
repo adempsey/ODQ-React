@@ -11,7 +11,7 @@ const AnswerSectionView = (props) => {
                     >
                         <AnswerView
                             index={index}
-                            text={answer}
+                            text={index == props.response ? "*"+answer : answer}
                             onSelect={props.onSelect}
                         />
                     </li>
