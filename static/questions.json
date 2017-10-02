@@ -1,0 +1,102 @@
+module.exports = {"data": [
+	{
+		"title": "Pain Intensity",
+		"answer": [
+			"I have no pain at the moment",
+			"The pain is very mild at the moment",
+			"The pain is moderate at the moment",
+			"The pain is fairly severe at the moment",
+			"The pain is very severe at the moment",
+			"The pain is the worst imaginable at the moment" ]
+	},
+	{
+		"title": "Personal Care (e.g. washing, dressing)",
+		"answer": [
+			"I can look after myself normally without causing extra pain",
+			"I can look after myself normally but it causes extra pain",
+			"It is painful to look after myself and I am slow and careful",
+			"I need some help but can manage most of my personal care",
+			"I need help everyday in most aspects of self-care",
+			"I do not get dressed, wash with difficulty, and stay in bed" ]
+	},
+	{
+		"title": "Lifting",
+		"answer": [
+			"I can lift heavy weights without extra pain",
+			"I can lift heavy weights but it gives me extra pain",
+			"I can lift heavy weights if they are conveniently placed, e.g. on a table",
+			"Pain prevents me lifting heavy weights but I can manage lighter weights if they are conveniently positioned",
+			"I can only lift very light weights",
+			"I cannot lift or carry anything" ]
+	},
+	{
+		"title": "Walking",
+		"answer": [
+			"Pain does not prevent my walking any distance",
+			"Pain prevents me from walking more than 1 mile (or 2 km)",
+			"Pain prevents me from walking more than half a mile (or 1 km)",
+			"Pain prevents me from walking more than a quarter of a mile (or .5 km)",
+			"I can only walk using a stick or crutches",
+			"I cannot walk at all" ]
+	},
+	{
+		"title": "Sitting",
+		"answer": [
+			"I can sit in any chair as long as I like",
+			"I can only sit in my favorite chair as long as I like",
+			"Pain prevents me from sitting more than 1 hour",
+			"Pain prevents me from sitting more than 30 minutes",
+			"Pain prevents me from sitting more than 10 minutes",
+			"Pain prevents from sitting at all" ]
+	},
+	{
+		"title": "Standing",
+		"answer": [
+			"I can stand as long as I want without extra pain",
+			"I can stand as long as I want but it gives me extra pain",
+			"Pain prevents me from standing for more than 1 hour",
+			"Pain prevents me from standing for more than 30 minutes",
+			"Pain prevents me from standing for more than 10 minutes",
+			"Pain prevents from standing at all" ]
+	},
+	{
+		"title": "Sleeping",
+		"answer": [
+			"My sleep is never disturbed by pain",
+			"My sleep is occasionally disturbed by pain",
+			"Because of pain I get less than 6 hours of sleep",
+			"Because of pain I get less than 4 hours of sleep",
+			"Because of pain I get less than 2 hours of sleep",
+			"Pain prevents from sleeping at all" ]
+	},
+	{
+		"title": "Sex Life (if applicable)",
+		"answer": [
+			"My sex life is normal and causes no extra pain",
+			"My sex life is normal but causes some extra pain",
+			"My sex life is nearly normal but is very painful",
+			"My sex life is severely restricted by pain",
+			"My sex life is nearly absent because of pain" ,
+			"Pain prevents any sex life at all" ]
+	},
+	{
+		"title": "Social Life",
+		"answer": [
+			"My social life is normal and gives me no extra pain",
+			"My social life is normal but increases the degree of pain",
+			"Pain has no significant effect on my social life apart from limiting my more energetic interests, e.g. sports",
+			"Pain has restricted my social life and I do not go out as often",
+			"Pain has restricted my social life to my home",
+			"I have no social life because of pain" ]
+	},
+	{
+		"title": "Traveling",
+		"answer": [
+			"I can travel anywhere without pain",
+			"I can travel anywhere but it gives me extra pain",
+			"Pain is bad but I manage journeys over two hours",
+			"Pain restricts me to journeys of less than one hour",
+			"Pain restricts me to short necessary journeys under 30 minutes",
+			"Pain prevents me from travelling except to receive treatment" ]
+	}
+]}
