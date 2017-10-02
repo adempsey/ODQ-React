@@ -14,13 +14,19 @@ const AppView = (props) => {
         props.onSelect(currentIndex, event.target.value);
     };
 
-    if (questionList.length > 0 && currentIndex < questionList.length) {
-        displayView = <QuestionView
-                            question={questionList[currentIndex]}
-                            onSelect={createResponse}
-                          /> ;
-    } else if (questionList.length > 0 && currentIndex >= questionList.length) {
-        displayView = <SummaryView questions={questionList}/>
+    if (questionList.length > 0) {
+        if (currentIndex < questionList.length) {
+            displayView = <QuestionView
+                                question={questionList[currentIndex]}
+                                onSelect={createResponse}
+                              /> ;
+
+        } else if (currentIndex == questionList.length) {
+            displayView = <SummaryView questions={questionList}/>
+
+        } else {
+            displayView = <h1>Thank you. Your responses have been recorded.</h1>
+        }
     }
 
     return (
@@ -35,6 +41,7 @@ const AppView = (props) => {
                     <NavPanelView
                         onPrevious={props.onPrevious}
                         onAdvance={props.onAdvance}
+                        onSubmit={props.onSubmit}
                         currentIndex={currentIndex}
                         questionList={questionList}/>
                 </Col>

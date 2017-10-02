@@ -15,6 +15,7 @@ class QuestionDisplayStore extends ReduceStore {
     reduce(state, action) {
         switch (action.type) {
             case QuestionActionTypes.ADVANCE_QUESTION:
+            case QuestionActionTypes.SUBMIT_RESPONSES:
                 return state + 1;
 
             case QuestionActionTypes.PREVIOUS_QUESTION:

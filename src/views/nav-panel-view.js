@@ -5,8 +5,22 @@ const NavPanelView = (props) => {
     const shouldEnableNext = (props.questionList[props.currentIndex] != null &&
                               props.questionList[props.currentIndex].response == -1);
 
-    var nextButton = null;
 
+    const onSubmit = () => {
+        const responses = props.questionList.map(q => {return q.response});
+        props.onSubmit(responses);
+    }
+
+    var previousButton = (
+        <Pager.Item
+            className="navigation-button"
+            onClick={props.onPrevious}
+            disabled={props.currentIndex < 1}>
+            Back
+        </Pager.Item>
+    );
+
+    var nextButton = null;
     if (props.currentIndex < props.questionList.length) {
         nextButton = (
             <Pager.Item
@@ -16,23 +30,21 @@ const NavPanelView = (props) => {
                 Next
             </Pager.Item>
         );
-    } else {
+    } else if (props.currentIndex == props.questionList.length) {
         nextButton = (
             <Pager.Item
-                className="navigation-button">
+                className="navigation-button"
+                onClick={onSubmit}>
                 Submit
             </Pager.Item>
         );
+    } else {
+        previousButton = null;
     }
 
     return (
         <Pager>
-            <Pager.Item
-                className="navigation-button"
-                onClick={props.onPrevious}
-                disabled={props.currentIndex < 1}>
-                Back
-            </Pager.Item>
+            {previousButton}
             {nextButton}
         </Pager>
     )

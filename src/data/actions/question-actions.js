@@ -28,6 +28,13 @@ const QuestionActions = {
             questionID,
             answerIndex
         })
+    },
+
+    submitResponses(responses) {
+        Dispatcher.dispatch({
+            type: QuestionActionTypes.SUBMIT_RESPONSES,
+            responses
+        })
     }
 }
 
