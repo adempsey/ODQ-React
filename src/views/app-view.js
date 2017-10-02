@@ -35,7 +35,8 @@ const AppView = (props) => {
                     <Pager>
                         <Pager.Item
                             className="navigation-button"
-                            onClick={props.onPrevious}>
+                            onClick={props.onPrevious}
+                            disabled={currentIndex < 1}>
                             Back
                         </Pager.Item>
                         <Pager.Item
