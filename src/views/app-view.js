@@ -1,8 +1,8 @@
 import React from 'react';
 import QuestionView from './question-view';
-import Immutable from 'immutable';
 import SummaryView from './summary-view';
-import { Grid, Row, Col, ButtonToolbar, Button, Pager } from 'react-bootstrap';
+import NavPanelView from './nav-panel-view';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 const AppView = (props) => {
 
@@ -32,20 +32,11 @@ const AppView = (props) => {
             </Row>
             <Row>
                 <Col md={12}>
-                    <Pager>
-                        <Pager.Item
-                            className="navigation-button"
-                            onClick={props.onPrevious}
-                            disabled={currentIndex < 1}>
-                            Back
-                        </Pager.Item>
-                        <Pager.Item
-                            className="navigation-button"
-                            onClick={props.onAdvance}
-                            disabled={questionList[currentIndex] != null && questionList[currentIndex].response == -1}>
-                            Next
-                        </Pager.Item>
-                    </Pager>
+                    <NavPanelView
+                        onPrevious={props.onPrevious}
+                        onAdvance={props.onAdvance}
+                        currentIndex={currentIndex}
+                        questionList={questionList}/>
                 </Col>
             </Row>
         </Grid>
