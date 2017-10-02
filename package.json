@@ -4,7 +4,6 @@
     "description": "Oswestry Disability Questionnaire Webapp",
     "repository": "git@github.com:adempsey/ODQ-React.git",
     "main": "src/root.js",
-    "start": "node server.js",
     "author": "Andrew Dempsey",
     "dependencies": {
         "express": "^4.16.1",
@@ -32,6 +31,8 @@
     },
     "scripts": {
         "build": "webpack ./src/root.js ./bundle.js",
-        "watch": "webpack ./src/root.js ./bundle.js --watch"
+        "watch": "webpack ./src/root.js ./bundle.js --watch",
+        "start": "node server.js",
+        "postinstall": "npm run build"
     }
 }
