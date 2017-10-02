@@ -2,7 +2,7 @@ import React from 'react';
 import QuestionView from './question-view';
 import Immutable from 'immutable';
 import SummaryView from './summary-view';
-import { Grid, Row, Col, ButtonToolbar, Button } from 'react-bootstrap';
+import { Grid, Row, Col, ButtonToolbar, Button, Pager } from 'react-bootstrap';
 
 const AppView = (props) => {
 
@@ -26,31 +26,28 @@ const AppView = (props) => {
     return (
         <Grid>
             <Row>
-                <Col xs={12}>
+                <Col md={12}>
                     {displayView}
                 </Col>
             </Row>
             <Row>
-                <Col xs={3} />
-                <Col xs={6}>
-                <ButtonToolbar>
-                    <Button
-                        className="navigation-button"
-                        bsSize="large"
-                        onClick={props.onPrevious}>
-                        Back
-                    </Button>
-                    <Button
-                        className="navigation-button"
-                        bsStyle="success"
-                        bsSize="large"
-                        onClick={props.onAdvance}
-                        disabled={questionList[currentIndex] != null && questionList[currentIndex].response == -1}>
-                        Next
-                    </Button>
-                </ButtonToolbar>
+                <Col md={12}>
+                    <Pager>
+                        <Pager.Item
+                            className="navigation-button"
+                            bsSize="large"
+                            onClick={props.onPrevious}>
+                            Back
+                        </Pager.Item>
+                        <Pager.Item
+                            className="navigation-button"
+                            bsSize="large"
+                            onClick={props.onAdvance}
+                            disabled={questionList[currentIndex] != null && questionList[currentIndex].response == -1}>
+                            Next
+                        </Pager.Item>
+                    </Pager>
                 </Col>
-                <Col xs={3} />
             </Row>
         </Grid>
     );

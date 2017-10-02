@@ -1,9 +1,10 @@
 import React from 'react';
+import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
 
 const SummaryView = (props) => {
     return (
-        <div>
-            <h1>Summary</h1>
+        <Grid>
+            <PageHeader>Summary</PageHeader>
                 <ul>
                     {
                         props.questions.map((question, index) => (
@@ -13,7 +14,7 @@ const SummaryView = (props) => {
                         ))
                     }
                 </ul>
-        </div>
+        </Grid>
     );
 };
 

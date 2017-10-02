@@ -4,10 +4,8 @@ import { ButtonToolbar } from 'react-bootstrap';
 
 const AnswerSectionView = (props) => {
 
-    const wellStyles = {maxWidth: 800, margin: '0 auto 10px'};
-
     return (
-        <div className="well" style={wellStyles}>
+        <div className="well">
             {
                 props.answers.map((answer, index) => (
                     <AnswerView
