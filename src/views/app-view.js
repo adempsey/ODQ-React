@@ -35,13 +35,11 @@ const AppView = (props) => {
                     <Pager>
                         <Pager.Item
                             className="navigation-button"
-                            bsSize="large"
                             onClick={props.onPrevious}>
                             Back
                         </Pager.Item>
                         <Pager.Item
                             className="navigation-button"
-                            bsSize="large"
                             onClick={props.onAdvance}
                             disabled={questionList[currentIndex] != null && questionList[currentIndex].response == -1}>
                             Next
